@@ -1,9 +1,10 @@
 {
-  "all": {
+  "k6": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-      "xk6": {},
-      "k6": {}
+      "k6": {
+        "version": "0.56.0"
+      }
     }
   }
 }

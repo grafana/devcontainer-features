@@ -1,0 +1,15 @@
+{
+  "name": "A modern load testing tool, using Go and JavaScript",
+  "id": "k6",
+  "version": "1.0.0",
+  "description": "**k6** is a modern load-testing tool, built on our years of experience in the performance and testing industries. It's built to be powerful, extensible, and full-featured. The key design goal is to provide **the best developer experience**.",
+  "documentationURL": "https://github.com/grafana/k6",
+  "options": {
+    "version": {
+      "type": "string",
+      "proposals": ["latest"],
+      "default": "latest",
+      "description": "Select the version to install"
+    }
+  }
+}
