@@ -7,7 +7,7 @@ This command line tool and associated Go package makes it easy to make custom bu
 
 ```json
 "features": {
-    "ghcr.io/grafana=devcontainer-features/xk6:1": {}
+    "ghcr.io/grafana/devcontainer-features/xk6:1": {}
 }
 ```
 
@@ -24,4 +24,4 @@ Visit the [GitHub repository](https://github.com/grafana/xk6) for documentation.
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/grafana/devcontainer-features/blob/main/src/xk6/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
