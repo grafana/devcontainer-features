@@ -1,5 +1,5 @@
 {
-  "k6": {
+  "k6-with-version": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "k6": {
