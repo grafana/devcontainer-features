@@ -2,18 +2,16 @@
 
 set -e
 
-if ! which curl > /dev/null; then
-    if grep -q "alpine" /etc/os-release; then
-        apk add --no-cache curl
-    else
+if ! which wget > /dev/null; then
+    if grep -vq "alpine" /etc/os-release; then
         apt-get update
-        DEBIAN_FRONTEND=noninteractive apt-get install -y -q curl ca-certificates
+        DEBIAN_FRONTEND=noninteractive apt-get install -y -q wget ca-certificates
     fi
 fi
 
 get_version() {
     if [ -z "$VERSION" ] || [ "$VERSION" = "latest" ]; then
-      url=$(curl "https://github.com/${OWNER}/${NAME}/releases/latest" -s -L -I -o /dev/null -w '%{url_effective}')
+      url=$(wget -q -O - --spider -S "https://github.com/${OWNER}/${NAME}/releases/latest" 2>&1 | grep Location)
       echo -n "${url##*v}"
     else
       echo -n "$VERSION"
@@ -47,4 +45,5 @@ PLATFORM="$(get_platform)"
 
 echo "Activating feature '${NAME}' version $VERSION on platform $PLATFORM"
 
-curl -sL "https://github.com/${OWNER}/${NAME}/releases/download/v${VERSION}/${NAME}_${VERSION}_${PLATFORM}.tar.gz" | tar -xzf - -C /usr/local/bin ${NAME}
+wget -qO - "https://github.com/${OWNER}/${NAME}/releases/download/v${VERSION}/${NAME}_${VERSION}_${PLATFORM}.tar.gz" | \
+ tar x -zf - -C /usr/local/bin ${NAME}

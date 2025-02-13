@@ -9,8 +9,9 @@ set -e
 source dev-container-features-test-lib
 
 # Feature-specific tests
-url=$(curl "https://github.com/grafana/k6/releases/latest" -s -L -I -o /dev/null -w '%{url_effective}')
-latest="${url##*v}"
+url=$(wget -q -O - --spider -S "https://github.com/grafana/k6/releases/latest" 2>&1 | grep Location)
+echo -n "${url##*v}"
+
 check "execute command" bash -c "k6 --version | grep '$latest'"
 
 # Report results

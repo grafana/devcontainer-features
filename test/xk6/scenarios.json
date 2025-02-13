@@ -1,5 +1,5 @@
 {
-  "xk6": {
+  "xk6-with-version": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "xk6": {

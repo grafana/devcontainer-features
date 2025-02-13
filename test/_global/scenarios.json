@@ -1,6 +1,20 @@
 {
-  "all": {
+  "ubuntu": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "xk6": {},
+      "k6": {}
+    }
+  },
+  "debian": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "xk6": {},
+      "k6": {}
+    }
+  },
+  "alpine": {
+    "image": "mcr.microsoft.com/devcontainers/base:alpine",
     "features": {
       "xk6": {},
       "k6": {}
