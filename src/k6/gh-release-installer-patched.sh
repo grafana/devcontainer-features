@@ -3,7 +3,9 @@
 set -e
 
 if ! which wget > /dev/null; then
-    if grep -vq "alpine" /etc/os-release; then
+    if grep -q "fedora" /etc/os-release; then
+        yum install -y wget
+    elif grep -vq "alpine" /etc/os-release; then
         apt-get update
         DEBIAN_FRONTEND=noninteractive apt-get install -y -q wget ca-certificates
     fi
