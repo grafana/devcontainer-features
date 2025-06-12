@@ -1,7 +1,7 @@
 {
   "name": "k6",
   "id": "k6",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "This feature installs the k6 CLI tool, which can be used to run load tests defined in JavaScript files.",
   "documentationURL": "https://github.com/grafana/devcontainer-features/tree/main/src/k6",
   "options": {

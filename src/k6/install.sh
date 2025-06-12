@@ -80,7 +80,7 @@ build_k6() {
 
     echo "Building k6 version $K6_VERSION with extensions: $WITH"
 
-    WITH_FLAGS=$(echo "$WITH" | sed -e 's/,/ --with /g' -e 's/^/--with /')
+    WITH_FLAGS=$(echo "$WITH" | sed -z -e 's/\n/ /g' -e 's/\[//g' -e 's/\]//g' -e 's/,/ --with /g' -e 's/^/--with /')
 
     export CGO_ENABLED="0"
 
