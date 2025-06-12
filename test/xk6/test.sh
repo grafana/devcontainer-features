@@ -9,7 +9,10 @@ set -e
 source dev-container-features-test-lib
 
 # Feature-specific tests
-check "execute command" bash -c "which xk6 | grep '/usr/local/bin/xk6'"
+url=$(wget -q -O - --spider -S "https://github.com/grafana/xk6/releases/latest" 2>&1 | grep Location)
+latest=$(echo -n "${url##*v}")
+
+check "latest version" bash -c "xk6 --version | grep '$latest'"
 
 # Report results
 reportResults

@@ -3,7 +3,7 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "xk6": {
-        "version": "0.14.0"
+        "version": "1.0.0"
       }
     }
   }

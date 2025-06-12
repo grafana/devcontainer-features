@@ -1,7 +1,7 @@
 
-# Build k6 with extensions (xk6)
+# xk6 (xk6)
 
-This command line tool and associated Go package makes it easy to make custom builds of [k6](https://github.com/grafana/k6). It is used heavily by k6 extension developers as well as anyone who wishes to make custom `k6` binaries (with or without extensions).
+This feature installs xk6, a tool for building custom k6 binaries with extensions.
 
 ## Example Usage
 
@@ -15,11 +15,11 @@ This command line tool and associated Go package makes it easy to make custom bu
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Select the version to install | string | latest |
+| version | The xk6 version to install | string | latest |
 
 ## Documentation
 
-Visit the [GitHub repository](https://github.com/grafana/xk6) for documentation.
+Visit the [xk6 GitHub repository](https://github.com/grafana/xk6) for xk6 documentation.
 
 
 ---

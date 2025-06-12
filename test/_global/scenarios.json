@@ -19,5 +19,23 @@
       "xk6": {},
       "k6": {}
     }
+  },
+  "ubuntu-custom-k6": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "k6": { "with": ["github.com/grafana/xk6-example", "github.com/grafana/xk6-output-example"] }
+    }
+  },
+  "debian-custom-k6": {
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "k6": { "with": ["github.com/grafana/xk6-example", "github.com/grafana/xk6-output-example"] }
+    }
+  },
+  "alpine-custom-k6": {
+    "image": "mcr.microsoft.com/devcontainers/base:alpine",
+    "features": {
+      "k6": { "with": ["github.com/grafana/xk6-example", "github.com/grafana/xk6-output-example"] }
+    }
   }
 }

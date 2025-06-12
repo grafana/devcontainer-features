@@ -3,8 +3,25 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
       "k6": {
-        "version": "0.56.0"
+        "version": "1.0.0"
       }
+    }
+  },
+  "k6-with-extensions": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "k6": {
+        "with": ["github.com/grafana/xk6-example", "github.com/grafana/xk6-output-example"]
+      }
+    }
+  },
+  "k6-with-extensions-has-go": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "k6": {
+        "with": ["github.com/grafana/xk6-example", "github.com/grafana/xk6-output-example"]
+      },
+      "ghcr.io/devcontainers/features/go:1": {}
     }
   }
 }

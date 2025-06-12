@@ -1,15 +1,15 @@
 {
-  "name": "Build k6 with extensions",
+  "name": "xk6",
   "id": "xk6",
-  "version": "1.0.1",
-  "description": "This command line tool and associated Go package makes it easy to make custom builds of [k6](https://github.com/grafana/k6). It is used heavily by k6 extension developers as well as anyone who wishes to make custom `k6` binaries (with or without extensions).",
-  "documentationURL": "https://github.com/grafana/xk6",
+  "version": "1.1.0",
+  "description": "This feature installs xk6, a tool for building custom k6 binaries with extensions.",
+  "documentationURL": "https://github.com/grafana/devcontainer-features/tree/main/src/xk6",
   "options": {
     "version": {
       "type": "string",
-      "proposals": ["latest"],
+      "proposals": ["latest", "1.0.0"],
       "default": "latest",
-      "description": "Select the version to install"
+      "description": "The xk6 version to install"
     }
   }
 }
