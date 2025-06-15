@@ -15,6 +15,15 @@
       }
     }
   },
+  "k6-with-version-and-extensions": {
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+      "k6": {
+        "version": "1.0.0",
+        "with": ["github.com/grafana/xk6-example", "github.com/grafana/xk6-output-example"]
+      }
+    }
+  },
   "k6-with-extensions-has-go": {
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {

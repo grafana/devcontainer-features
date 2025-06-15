@@ -73,6 +73,9 @@ cleanup_go() {
 
 # Build k6 with extensions
 build_k6() {
+    K6_VERSION="v$(get_k6_version)"
+    K6_PLATFORM="$(get_k6_platform)"
+
     echo "Activating feature 'k6' version $K6_VERSION with $WITH on platform $K6_PLATFORM"
 
     install_go
